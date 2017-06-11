@@ -13,3 +13,13 @@ sqldf('select * from mtcars order by drat', row.names = TRUE)
 
 # Using mtcars dataset, rank the cars in terms of mpg
 sqldf('select * from mtcars order by mpg', row.names = TRUE)
+
+# Rank the gear’s in terms of average mpg
+sqldf('select gear, avg(mpg) from mtcars group by gear order by avg(mpg)', row.names = TRUE)
+
+#Output
+> sqldf('select gear, avg(mpg) from mtcars group by gear order by avg(mpg)', row.names = TRUE)
+  gear avg(mpg)
+1    3 16.10667
+2    5 21.38000
+3    4 24.53333
