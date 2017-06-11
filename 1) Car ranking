@@ -1,0 +1,15 @@
+# Using mtcars dataset, rank the cars in terms of hp
+library(sqldf)
+sqldf('select * from mtcars order by hp', row.names = TRUE)
+
+# Using mtcars dataset, rank the cars in terms of hp
+sqldf('select * from mtcars order by wt', row.names = TRUE)
+
+# Using mtcars dataset, rank the cars in terms of disp
+sqldf('select * from mtcars order by disp', row.names = TRUE)
+
+# Using mtcars dataset, rank the cars in terms of drat
+sqldf('select * from mtcars order by drat', row.names = TRUE)
+
+# Using mtcars dataset, rank the cars in terms of mpg
+sqldf('select * from mtcars order by mpg', row.names = TRUE)
